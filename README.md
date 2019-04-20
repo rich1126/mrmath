@@ -53,6 +53,8 @@ So, naturally, I would like to be able to implement it to draw figures based on 
 
 Here is a minimum working example for using Asymptote with `vtwo`. The general format is `vec1.draw(ctx, vec2)` which draws `vec1` on the asymptote context `ctx`, with origin `vec2`.
 
+You can also use `vec.label(ctx, string, direction)` where `string` is a valid LaTeX-type string defining the label text, and direction is a cardinal direction. Currently the direction is relative to the mid-point of the vector.
+
 ```python
 from mrmath import *
 
@@ -70,6 +72,10 @@ g.size(200)
 vec1.draw(g, origin)
 vec2.draw(g, origin)
 vec3.draw(g, vec2)
+
+## Label vec1 as \vec{a}
+## Use a raw string r' ' to make sure slashes work
+vec1.label(g, r'"$\vec{a}$"', 'SE')
 
 del g
 ```
