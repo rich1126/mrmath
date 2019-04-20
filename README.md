@@ -44,3 +44,11 @@ A standard complex number class. You can do normal arithmetic operations (add, s
 Initiated by `Complex(Real, Imaginary = 0)` so you can just put in a real number so that it acts as a complex number. Arithmetic operations can interface with `int`, `float`, or `frac` types. (So, the hierarchy here is that if `int` or `float` interface with a `frac`, they become `frac`. If any of the below interface with `Complex`, they become `Complex`.
 
 Supports magnitude and conjugation. Can convert to vector using `com.asVector()`. Similarly, can convert `Real` and `Imaginary` to `frac` types using `com.asFrac()`.
+
+## Graphics (in testing)
+
+I like to use the [Asymptote Vector Graphics](http://asymptote.sourceforge.net) language to create diagrams. I use it at work, and it's an absolutely fantastic language with a pretty intuitive way of drawing things. It does a lot of the work for you.
+
+So, naturally, I would like to be able to implement it to draw figures based on at least the `vtwo` objects, and probably `Complex` objects. However, you would need to have an installation of Asymptote and a postScript viewer. (Asymptote comes with TeXLive if you have that. The standard PostScript viewer at least on Debian-based Linux distros is `gv`. Not sure what the situation is on other platforms, but it should be easy enough to find.)
+
+I'm working on just having this part of things be functional for myself, and will figure out more options later.
