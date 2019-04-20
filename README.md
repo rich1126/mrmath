@@ -49,7 +49,7 @@ Supports magnitude and conjugation. Can convert to vector using `com.asVector()`
 
 I like to use the [Asymptote Vector Graphics](http://asymptote.sourceforge.net) language to create diagrams. I use it at work, and it's an absolutely fantastic language with a pretty intuitive way of drawing things. It does a lot of the work for you.
 
-So, naturally, I would like to be able to implement it to draw figures based on at least the `vtwo` objects, and probably `Complex` objects. However, you would need to have an installation of Asymptote and a postScript viewer. (Asymptote comes with TeXLive if you have that. The standard PostScript viewer at least on Debian-based Linux distros is `gv`. Not sure what the situation is on other platforms, but it should be easy enough to find.)
+So, naturally, I would like to be able to implement it to draw figures based on at least the `vtwo` objects, and probably `Complex` objects. However, you would need to have an installation of Asymptote and a postScript viewer. (Asymptote comes with TeXLive if you have that. The standard PostScript viewer at least on Debian-based Linux distros is `gv`. It seems this is also available on Mac via `brew`, and I'm unsure about Windows.)
 
 Here is a minimum working example for using Asymptote with `vtwo`. The general format is `vec1.draw(ctx, vec2)` which draws `vec1` on the asymptote context `ctx`, with origin `vec2`.
 
@@ -82,3 +82,7 @@ del g
 The result is a pretty basic image: 
 
 ![alt text](https://github.com/rich1126/mrmath/blob/master/vectorAdd.png "Vector Addition")
+
+If you want to interface more directly with Asymptote within a Python script, because you want to do anything beyond drawing and labeling vectors, check out some of the basics [https://artofproblemsolving.com/wiki/index.php/Asymptote_(Vector_Graphics_Language)](here). Theoretically everything you could want can be done via the `send` method in asymptote.py, but some of the main functions like `draw`, `label`, `fill`, and `path` are written as methods to make things about 15% easier.
+
+Of course, at that point it's probably easier to directly write Asymptote code. But hey, sometimes it's good to have things in the same place.
