@@ -45,7 +45,7 @@ Initiated by `Complex(Real, Imaginary = 0)` so you can just put in a real number
 
 Supports magnitude and conjugation. Can convert to vector using `com.asVector()`. Similarly, can convert `Real` and `Imaginary` to `frac` types using `com.asFrac()`.
 
-## Graphics (in testing)
+## Graphics (in development)
 
 I like to use the [Asymptote Vector Graphics](http://asymptote.sourceforge.net) language to create diagrams. I use it at work, and it's an absolutely fantastic language with a pretty intuitive way of drawing things. It does a lot of the work for you.
 
