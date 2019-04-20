@@ -75,4 +75,4 @@ del g
 ```
 The result is a pretty basic image: 
 
-![alt text](https://github.com/rich1126/mrmath/blob/update-readme/example.png)
+![alt text](https://github.com/rich1126/mrmath/blob/master/example.png "Vector Addition")
