@@ -1,6 +1,7 @@
 import math
 from .complexNumbers import *
 from .frac import *
+from .asymptote import *
 
 class vtwo: 
     """
@@ -16,6 +17,9 @@ class vtwo:
 
     def __add__(self, other):
         return vtwo(self.x + other.x, self.y + other.y)
+        
+    def __sub__(self, other):
+        return vtwo(self.x - other.x, self.y - other.y)
 
     def scale(self, constant): ## Scalar multiplication
         return vtwo(constant * self.x, constant * self.y)
@@ -86,4 +90,8 @@ class vtwo:
     
     def asComplex(self):
         return Complex(self.x, self.y) 
+        
+    def draw(self, ctx, o): ## Draw onto an asy() diagram
+        ctx.draw(str(o) + "--("+str(self.x + o.x)+","+str(self.y+o.y)+"),EndArrow")
+        
 
