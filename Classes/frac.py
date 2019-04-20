@@ -69,6 +69,9 @@ class frac:
         num = (self.num * other.den) - (self.den*other.num)
         den = self.den * other.den
         return frac(num, den)
+        
+    def __neg__(self):
+        return frac(-self.num, self.den)
 
     def __mul__(self, other):
         if type(other) == int or type(other) == float:
@@ -92,13 +95,25 @@ class frac:
         return int(self.num) / int(self.den)
 
     def __pow__(self, power):
-        return frac(self.num ** power, self.den ** power)
+        if type(power) == int:
+            return frac(self.num ** power, self.den ** power)
+        elif type(power) == float:
+            return float(self)**power
+        elif type(power) == frac:
+            return float(self)**float(power)
+        else:
+            raise TypeError
 
     def __eq__(self, other):
         if type(other) == frac:
             if self.num == other.num and self.den == other.den:
                 return True
             else: return False
+        elif type(other) == int or type(other) == float:
+            if float(self) == float(other):
+                return True
+            else:
+                return False
         else:
             return False
 
@@ -109,16 +124,22 @@ class frac:
             return False
 
     def __gt__(self, other):
-        return other < self
+        if float(other) < float(self):
+            return True
+        else:
+            return False
 
     def __le__(self, other):
         if self < other or self == other:
             return True
         else:
-             return False
+            return False
 
     def __ge__(self, other):
-        return other <= self
+        if self > other or self == other:
+            return True
+        else:
+            return False
 
     def roundInt(self):
         return int(round(float(self)))

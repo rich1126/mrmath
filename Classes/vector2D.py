@@ -30,6 +30,9 @@ class vtwo:
             return True
         else:
             return False
+            
+    def __neg__(self):
+        return vtwo(-self.x, -self.y)
     
     def dot(self, other):
         return self.x * other.x + self.y * other.y
@@ -79,5 +82,8 @@ class vtwo:
     def asFrac(self):
         x = frac(self.x)
         y = frac(self.y)
-        return vtwo(x,y) 
+        return vtwo(x,y)
+    
+    def asComplex(self):
+        return Complex(self.x, self.y) 
 
