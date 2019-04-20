@@ -51,4 +51,26 @@ I like to use the [Asymptote Vector Graphics](http://asymptote.sourceforge.net) 
 
 So, naturally, I would like to be able to implement it to draw figures based on at least the `vtwo` objects, and probably `Complex` objects. However, you would need to have an installation of Asymptote and a postScript viewer. (Asymptote comes with TeXLive if you have that. The standard PostScript viewer at least on Debian-based Linux distros is `gv`. Not sure what the situation is on other platforms, but it should be easy enough to find.)
 
-I'm working on just having this part of things be functional for myself, and will figure out more options later.
+Here is a minimum working example for using Asymptote with `vtwo`. The general format is `vec1.draw(ctx, vec2)` which draws `vec1` on the asymptote context `ctx`, with origin `vec2`.
+
+```python
+from mrmath import *
+
+## Create vector objects
+origin = vtwo(0,0)
+vec1 = vtwo(3,4)
+vec2 = vtwo(1,2)
+vec3 = vec1 - vec2
+
+## Create asymptote object
+g = asy()
+g.size(200)
+
+## Draw vectors
+vec1.draw(g, origin)
+vec2.draw(g, origin)
+vec3.draw(g, vec2)
+
+del g
+```
+The result is a pretty basic image:
