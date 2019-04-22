@@ -83,6 +83,6 @@ The result is a pretty basic image:
 
 ![alt text](https://github.com/rich1126/mrmath/blob/master/vectorAdd.png "Vector Addition")
 
-If you want to interface more directly with Asymptote within a Python script, because you want to do anything beyond drawing and labeling vectors, check out some of the basics [https://artofproblemsolving.com/wiki/index.php/Asymptote_(Vector_Graphics_Language)](here). Theoretically everything you could want can be done via the `send` method in asymptote.py, but some of the main functions like `draw`, `label`, `fill`, and `path` are written as methods to make things about 15% easier.
+If you want to interface more directly with Asymptote within a Python script, because you want to do anything beyond drawing and labeling vectors, check out some of the basics [here](https://artofproblemsolving.com/wiki/index.php/Asymptote_(Vector_Graphics_Language)). Theoretically everything you could want can be done via the `send` method in asymptote.py, but some of the main functions like `draw`, `label`, `fill`, and `path` are written as methods to make things about 15% easier.
 
 Of course, at that point it's probably easier to directly write Asymptote code. But hey, sometimes it's good to have things in the same place.
