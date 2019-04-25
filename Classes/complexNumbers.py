@@ -1,6 +1,6 @@
 import math
-from .frac import *
-from .vector2D import *
+from frac import *
+from vector2D import *
 
 class Complex(object):
 

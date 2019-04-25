@@ -1,7 +1,7 @@
 import math
-from .complexNumbers import *
-from .frac import *
-from .asymptote import *
+from complexNumbers import *
+from frac import *
+from asymptote import *
 
 class vtwo: 
     """
@@ -93,5 +93,10 @@ class vtwo:
         
     def draw(self, ctx, o): ## Draw onto an asy() diagram
         ctx.draw(str(o) + "--("+str(self.x + o.x)+","+str(self.y+o.y)+"),EndArrow")
-        
 
+    def label(self, ctx, string, direction = 'N'):
+        ctx.label(string + f',({self.x/2},{self.y/2}),' +direction)
+
+    def triangle(self, other): ## Third side of triangle made by self, other
+        cSquared = abs(self)**2 + abs(other)**2 - 2*self.dot(other)
+        return math.sqrt(cSquared)
