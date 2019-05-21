@@ -14,9 +14,10 @@ class Error(Exception):
 
 class InvalidTriangleError(Error):
     '''Raised when triangle is invalid'''
-    def __init__(self, expression, message):
-        self.expression = expression
-        self.message = message
+    def __init__(self):
+        self.message = 'Invalid Triangle'
+        
+    
 
 ###############################################
 ###############################################
@@ -32,7 +33,7 @@ def triOrigin(a, b, c):
     Returns list of points making that triangle.
     '''
     if a + b <= c or a + c <= b or b + c <= a: #Check triangle inequality
-        raise InvalidTriangleError("a, b, c", "Violates triangle inequality")
+        raise InvalidTriangleError()
     else:
         pointList = [(0,0), (a,0)]
         cTheta = (a**2 + c**2 - b**2) / (2*a*c) #Law of Cosines
