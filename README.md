@@ -45,6 +45,16 @@ Initiated by `Complex(Real, Imaginary = 0)` so you can just put in a real number
 
 Supports magnitude and conjugation. Can convert to vector using `com.asVector()`. Similarly, can convert `Real` and `Imaginary` to `frac` types using `com.asFrac()`.
 
+---
+
+## Polynomials
+
+A standard real-number polynomial class. You can do addition, subtraction, and multiplication. The multiplication operation supports scaling by an integer or float (full frac support coming later), or by another polynomial.
+
+Displays in the "Mathematica style" that looks like `1 + x^1 + -2x^2 + x^4` for clarity.
+
+---
+
 ## Graphics (in development)
 
 I like to use the [Asymptote Vector Graphics](http://asymptote.sourceforge.net) language to create diagrams. I use it at work, and it's an absolutely fantastic language with a pretty intuitive way of drawing things. It does a lot of the work for you.
