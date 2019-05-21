@@ -53,6 +53,8 @@ A standard real-number polynomial class. You can do addition, subtraction, and m
 
 Displays in the "Mathematica style" that looks like `1 + x^1 + -2x^2 + x^4` for clarity.
 
+You can evaluate the polynomial at a certain value by doing `myPoly.eval(n)`.
+
 ---
 
 ## Graphics (in development)
