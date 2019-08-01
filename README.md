@@ -57,7 +57,7 @@ Supports magnitude and conjugation. Can convert to vector using `com.asVector()`
 
 ## Polynomials
 
-A standard real-number polynomial class. You can do addition, subtraction, and multiplication. The multiplication operation supports scaling by an integer or float (full frac support coming later), or by another polynomial.
+A standard real-number polynomial class. You can do addition, subtraction, and multiplication. The multiplication operation supports scaling by an integer or float (full frac support coming later), or by another polynomial. You can also add a constant integer or float. So, if you have a polynomial `a`, then `a+poly([3])` and `a+3` return the same thing. 
 
 Displays in the "Mathematica style" that looks like `1 + x^1 + -2x^2 + x^4` for clarity.
 
