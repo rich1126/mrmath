@@ -58,14 +58,19 @@ class poly:
         """
         Simple polynomial addition
         """
-        newCoeff = [0 for i in range(1+max(self.deg, other.deg))]
-        for i in range(len(self.co)):
-            newCoeff[i] += self.co[i]
+        if type(other) == int or type(other) == float:
+            newCoeff = [i for i in self.co]
+            newCoeff[0] += other
+            return poly(newCoeff)
+        else:
+            newCoeff = [0 for i in range(1+max(self.deg, other.deg))]
+            for i in range(len(self.co)):
+                newCoeff[i] += self.co[i]
 
-        for i in range(len(other.co)):
-            newCoeff[i] += other.co[i]
+            for i in range(len(other.co)):
+                newCoeff[i] += other.co[i]
 
-        return poly(newCoeff)
+            return poly(newCoeff)
 
     def __sub__(self,other):
         """
