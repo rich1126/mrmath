@@ -72,6 +72,9 @@ class poly:
 
             return poly(newCoeff)
 
+    def __radd__(self,other):
+        return self+other
+
     def __sub__(self,other):
         """
         Simple polynomial subtraction
