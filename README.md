@@ -25,7 +25,7 @@ Has a simple method `myFrac.roundInt()` which just rounds it to the nearest inte
 
 ## 2D Vectors
 
-A class `vtwo` that works as a two-dimensional vector over the real numbers. Tentative plans to add another class later for three-dimensional, then arbitrary-dimensional vectors as well.
+A class `vtwo` that works as a two-dimensional vector over the real numbers. Tentative plans to add another class later for arbitrary-dimensional vectors as well.
 
 A `vtwo` is represented as `(x,y)`. You can add vectors component-wise, scale using `vec.scale(constant)`, get the magnitude using `abs(vec)`, find the dot (or inner) product using `vec1.dot(vec2)`, as well as the 2D scalar cross product, `vec1.cross(vec2)` which returns v_1 x v_2.
 
@@ -34,6 +34,14 @@ Other methods include finding the angle in standard position: `vec.angle('r')` f
 Vectors also support the `frac` type. That is, in addition to the components `x` and `y` being `int` or `float`, they can also be `frac`. You can turn them directly by using `vec.asFrac()`, which returns another `vtwo` object where the components are `frac`.
 
 Finally, you can take a vector and represent it in the complex plane using `vec.asComplex()` which returns a `Complex` object.
+
+---
+
+## 3D Vectors
+
+A class `vthree` that works as a three-dimensional vector over all real numbers. A `vthree` is represented as `(x,y,z)`. The same `scale`, `abs`, and `dot` methods work in three dimensions. Of course, the `vec1.cross(vec2)` method returns another vthree object. I will add similar `angle` and `proj` methods for finding angles and projections later.
+
+Support for `frac` type still on-going; of course, there is no `asComplex` method.
 
 ---
 
